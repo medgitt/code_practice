@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ColorandTextChange</title>
+</head>
+<body>
+
+    <div class="container">
+        <label for="colorMenu">Pick Color</label>
+        <select id="colorOption" onchange="changeColor()">
+            <option value="red">Red</option>
+            <option value="green">Green</option>
+            <option value="orange">Orange</option>
+            <option value="blue">Blue</option>
+            <option value="pink">Pink</option>
+        </select>
+
+        <label for="fontMenu">Choose Font Size</label>
+        <select id="font" onchange="changeSize()">
+            <option value="10px">10px</option>
+            <option value="20px">20px</option>
+            <option value="30px">30px</option>
+            <option value="40px">40px</option>
+            <option value="50px">50px</option>
+        </select>
+
+        <h1 id="text">Hello JavaScript, the most loved programming language</h1>
+    </div>
+
+    <script>
+        var colorOption = document.getElementById("colorOption");
+        var font = document.getElementById("font");
+        var text = document.getElementById("text");
+
+        function changeColor() {
+            text.style.color = colorOption.value;
+        }
+
+        function changeSize() {
+            text.style.fontSize = font.value;
+        }
+    </script>
+
+</body>
+</html>
