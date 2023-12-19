@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <img
+      src="https://wallpapercave.com/wp/wp4923992.png"
+      width="300"
+      height="300"
+      id="myImage"
+    /><br />
+    <button onclick="changeShape('circle')" id="circle">Circle</button>
+    <button onclick="changeShape('square')" id="square" >Square</button>
+
+
+  </body>
+
+  <script>
+
+    var image=document.querySelector("#myImage");
+    var circle=document.querySelector("#circle");
+    var square=document.querySelector("#square");
+
+
+    function changeShape(shape){
+
+        shape === "circle" ? image.style.borderRadius="50%" : image.style.borderRadius = "0%";
+
+
+    }
+</script>
+
+</html>

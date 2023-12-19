@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Display Text Entered</title>
+</head>
+<body>
+
+
+
+
+    <script>
+
+        // creating button, text box,div,h2 element 
+        var textBox=document.createElement("Input");
+        textBox.type="text";
+
+        var btn=document.createElement("button");
+        btn.type="button";
+        btn.innerText="Submit";
+        btn.onclick=function () { Submit();};
+        
+
+        var dRef=document.createElement("div");
+        dRef.className="displayText";
+
+        
+        // Append
+        dRef.appendChild(textBox);
+        dRef.appendChild(btn);
+
+        document.body.appendChild(dRef);
+
+        // Create Submit button Function
+        function Submit(){
+            var textValue=textBox.value;
+
+            var h3Ref=document.createElement("h3");
+    //    the above when declared outside the function it displayed just one text at a time and not list of text whyyy??
+            h3Ref.innerText=textValue; 
+            dRef.appendChild(h3Ref);
+
+            
+            // why is my value blank after each submit;  
+            textValue="";
+            
+
+
+        }
+        
+
+
+
+        
+    </script>
+
+
+
+    
+</body>
+</html>
